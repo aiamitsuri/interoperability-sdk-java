@@ -1,4 +1,4 @@
-# BHILANI Interop SDK Suite by kantini, chanchali
+Welcome to **BHILANI**, an **Agentic Interop SDK Suite** by **Kantini, Chanchali**
 
 Run SDK
 
@@ -18,7 +18,11 @@ Basic Usage
     
         public void runDemo() {
             String url = "";
-            String params = "{\"page\": \"1\"}"; 
+            String params = """
+            {
+              "page": "1"
+            }
+            """;
             
             System.out.println("Java SDK");
             
