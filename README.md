@@ -10,29 +10,27 @@ Basic Usage
     
     public class JVMSDKit {
     
-        public native String fetchInteroperability(String url, String paramsJson);
+        private native String fetchInteroperability(String url, String paramsJson);
     
         static {
             System.loadLibrary("interoperability_wrapper_robusta");
         }
     
-        public void runDemo() {
-            String url = "";
+        void main() {
             String params = """
-            {
-              "page": "1"
-            }
-            """;
-            
+                {
+                  "language": null,
+                  "integration": null,
+                  "crates": null,
+                  "developmentkit": null,
+                  "page": "1",
+                  "ids": null
+                }
+                """;
+                
             System.out.println("Java SDK");
             
-            String response = fetchInteroperability(url, params);
-            
-            System.out.println(response);
-        }
-    
-        public static void main(String[] args) {
-            new JVMSDKit().runDemo();
+            System.out.println(fetchInteroperability("", params));
         }
     }
 
